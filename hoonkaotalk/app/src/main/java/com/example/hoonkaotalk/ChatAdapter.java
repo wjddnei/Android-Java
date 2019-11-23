@@ -3,7 +3,7 @@ package com.example.hoonkaotalk;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -36,15 +36,15 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
 
     static class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView textView;
+        Button button;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            textView = itemView.findViewById(R.id.textView);
+            button = itemView.findViewById(R.id.button);
         }
 
         public void setItem(Chat item) {
-            textView.setText(item.getMessage());
+            button.setText(item.getMessage());
         }
     }
 
