@@ -36,6 +36,7 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
 
     static class ViewHolder extends RecyclerView.ViewHolder {
 
+        //view를 버튼으로 설정
         Button button;
 
         public ViewHolder(@NonNull View itemView) {
