@@ -3,7 +3,7 @@ package com.example.toeholdTalk;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -36,15 +36,16 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
 
     static class ViewHolder extends RecyclerView.ViewHolder {
 
-        Button button;
+        TextView nameTextView, messageTextView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            button = itemView.findViewById(R.id.button);
+            nameTextView = itemView.findViewById(R.id.nameTextView);
+            messageTextView = itemView.findViewById(R.id.messageTextView);
         }
-
         public void setItem(Chat item) {
-            button.setText(item.getMessage());
+            nameTextView.setText(item.getFriendName());
+            messageTextView.setText(item.getMessage());
         }
     }
 

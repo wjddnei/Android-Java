@@ -1,6 +1,6 @@
 package com.example.toeholdTalk;
 
-public class Person {
+public class Person implements Comparable<Person> {
     private String name;
     private String phoneNumber;
 
@@ -17,4 +17,9 @@ public class Person {
         this.name = name;
     }
     public void setPhoneNumber(String phoneNumber) { this.phoneNumber = phoneNumber; }
+
+    @Override
+    public int compareTo(Person person) {
+        return this.name.compareTo(person.name);
+    }
 }

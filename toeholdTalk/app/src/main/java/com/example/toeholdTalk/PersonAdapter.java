@@ -36,20 +36,25 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
 
     static class ViewHolder extends RecyclerView.ViewHolder {
 
-        Button button;
+        Button personButton;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            button = itemView.findViewById(R.id.button);
+            personButton = itemView.findViewById(R.id.personButton);
         }
         public void setItem(Person item) {
-            button.setText(item.getName());
+            personButton.setText(item.getName());
         }
     }
 
-
     public void addItem(Person item) {
         items.add(item);
+    }
+
+    public void addItem(ArrayList<Person> item) {
+        for(Person node : item) {
+            items.add(node);
+        }
     }
 
     public void setItems(ArrayList<Person> items) {
