@@ -1,10 +1,10 @@
 package com.example.toeholdTalk;
 
-public class Chat {
+public class ChatList {
     private String message;
     private String friendName;
 
-    public Chat(String message, String friendName) {
+    public ChatList(String message, String friendName) {
         this.message = message;
         this.friendName = friendName;
     }

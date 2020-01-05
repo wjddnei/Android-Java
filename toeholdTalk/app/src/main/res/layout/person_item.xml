@@ -13,6 +13,7 @@
         app:cardUseCompatPadding="false">
 
         <LinearLayout
+            android:id="@+id/personItemLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
@@ -24,13 +25,14 @@
                 android:padding="5dp"
                 app:srcCompat="@drawable/user_icon" />
 
-            <Button
-                android:id="@+id/personButton"
+            <TextView
+                android:id="@+id/personTextView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:background="#00ff0000"
-                android:text="이름"
                 android:gravity="left"
+                android:text="이름"
+                android:textColor="#000000"
                 android:textSize="25sp" />
 
 

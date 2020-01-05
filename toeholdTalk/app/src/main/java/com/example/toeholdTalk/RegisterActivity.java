@@ -36,7 +36,6 @@ public class RegisterActivity extends AppCompatActivity {
         passwordEditText1 = findViewById(R.id.passwordEditText1);
         passwordEditText2 = findViewById(R.id.passwordEditText2);
 
-        wSocket.connect(); //소켓 연결
         socket = wSocket.get();
         socket.on("registerResult", registerResult); //registerResult 핸들러
 

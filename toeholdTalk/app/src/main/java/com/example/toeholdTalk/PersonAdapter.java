@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -36,14 +37,14 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
 
     static class ViewHolder extends RecyclerView.ViewHolder {
 
-        Button personButton;
+        TextView personTextView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            personButton = itemView.findViewById(R.id.personButton);
+            personTextView = itemView.findViewById(R.id.personTextView);
         }
         public void setItem(Person item) {
-            personButton.setText(item.getName());
+            personTextView.setText(item.getName());
         }
     }
 

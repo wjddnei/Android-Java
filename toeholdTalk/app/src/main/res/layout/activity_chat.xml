@@ -4,27 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FriendListFragment">
+    tools:context=".ChatListFragment">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/toolbar3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#FFDD00"
-        android:minHeight="56dp"
+        android:background="#FFFFFFFF"
+        android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        android:layout_alignParentTop="true"
-        app:title="친구" />
+        app:menu="@menu/chat_menu_top"/>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/friendListView"
+        android:id="@+id/chatListRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolbar"
-        tools:listitem="@layout/person_item">
-
-
-    </androidx.recyclerview.widget.RecyclerView>
-
+        android:layout_below="@id/toolbar3"
+        tools:listitem="@layout/my_chat_item"/>
 
 </RelativeLayout>
