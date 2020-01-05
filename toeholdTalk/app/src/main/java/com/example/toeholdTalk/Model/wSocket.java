@@ -1,4 +1,4 @@
-package com.example.toeholdTalk;
+package com.example.toeholdTalk.Model;
 
 import io.socket.client.IO;
 import io.socket.client.Socket;

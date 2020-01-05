@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChatListFragment">
+    tools:context=".Fragment.ChatListFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar3"
@@ -19,7 +19,6 @@
         android:id="@+id/chatListRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolbar3"
-        tools:listitem="@layout/my_chat_item"/>
+        android:layout_below="@id/toolbar3"/>
 
 </RelativeLayout>

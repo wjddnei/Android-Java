@@ -1,4 +1,4 @@
-package com.example.toeholdTalk;
+package com.example.toeholdTalk.Activity;
 
 import android.os.Bundle;
 
@@ -6,6 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.example.toeholdTalk.Fragment.ChatListFragment;
+import com.example.toeholdTalk.Fragment.FriendListFragment;
+import com.example.toeholdTalk.Model.MyInfo;
+import com.example.toeholdTalk.R;
+import com.example.toeholdTalk.Model.wSocket;
 import com.google.android.material.tabs.TabLayout;
 
 import io.socket.client.Socket;
@@ -28,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //socket= wSocket.get();
-        //socket.emit("transferId", MyInfo.getMyId());
+        socket= wSocket.get();
+        socket.emit("transferId", MyInfo.getMyId());
         setupTabLayout();
 
         fragmentManager = getSupportFragmentManager();

@@ -1,19 +1,25 @@
-package com.example.toeholdTalk;
+package com.example.toeholdTalk.Adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.toeholdTalk.Model.Person;
+import com.example.toeholdTalk.R;
 
 import java.util.ArrayList;
 
 public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder> {
 
     ArrayList<Person> items = new ArrayList<Person>();
+
+    public PersonAdapter(ArrayList<Person> personList) {
+        items = personList;
+    }
 
     @NonNull
     @Override

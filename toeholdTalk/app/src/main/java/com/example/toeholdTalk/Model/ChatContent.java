@@ -1,4 +1,4 @@
-package com.example.toeholdTalk;
+package com.example.toeholdTalk.Model;
 
 import androidx.annotation.NonNull;
 

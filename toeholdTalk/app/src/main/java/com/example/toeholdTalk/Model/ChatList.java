@@ -1,10 +1,12 @@
-package com.example.toeholdTalk;
+package com.example.toeholdTalk.Model;
 
 public class ChatList {
+    private String id;
     private String message;
     private String friendName;
 
-    public ChatList(String message, String friendName) {
+    public ChatList(String id, String friendName, String message) {
+        this.id = id;
         this.message = message;
         this.friendName = friendName;
     }

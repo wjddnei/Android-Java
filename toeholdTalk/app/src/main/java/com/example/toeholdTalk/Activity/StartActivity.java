@@ -1,4 +1,4 @@
-package com.example.toeholdTalk;
+package com.example.toeholdTalk.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,7 +9,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.toeholdTalk.MyInfo;
+import com.example.toeholdTalk.Model.MyInfo;
+import com.example.toeholdTalk.R;
+import com.example.toeholdTalk.Model.wSocket;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -85,7 +87,6 @@ public class StartActivity extends AppCompatActivity {
         } catch (JSONException e) {
             e.printStackTrace();;
         }
-
     }
 
     Emitter.Listener loginResult = new Emitter.Listener() {
@@ -104,11 +105,6 @@ public class StartActivity extends AppCompatActivity {
                 @Override
                 public void run() {
                     switch (result) {
-                        case 0:
-                            Toast.makeText(StartActivity.this, "서버 에러", Toast.LENGTH_SHORT).show();
-                            idEditText.setText("");
-                            passwordEditText.setText("");
-                            break;
                         case 1:
                             Toast.makeText(StartActivity.this, "존재하지 않는 아이디입니다.", Toast.LENGTH_SHORT).show();
                             idEditText.setText("");

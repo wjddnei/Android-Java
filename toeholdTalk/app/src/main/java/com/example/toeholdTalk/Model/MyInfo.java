@@ -1,4 +1,4 @@
-package com.example.toeholdTalk;
+package com.example.toeholdTalk.Model;
 
 public class MyInfo {
     static String myId;

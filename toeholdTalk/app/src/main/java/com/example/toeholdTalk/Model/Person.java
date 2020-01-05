@@ -1,11 +1,13 @@
-package com.example.toeholdTalk;
+package com.example.toeholdTalk.Model;
 
 public class Person implements Comparable<Person> {
     private String name;
+    private String id;
     private String phoneNumber;
 
-    public Person(String name) {
+    public Person(String id, String name) {
         this.name = name;
+        this.id = id;
     }
 
     public String getName() {

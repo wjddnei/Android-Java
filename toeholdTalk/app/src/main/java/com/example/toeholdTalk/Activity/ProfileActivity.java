@@ -1,8 +1,10 @@
-package com.example.toeholdTalk;
+package com.example.toeholdTalk.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.toeholdTalk.R;
 
 public class ProfileActivity extends AppCompatActivity {
 

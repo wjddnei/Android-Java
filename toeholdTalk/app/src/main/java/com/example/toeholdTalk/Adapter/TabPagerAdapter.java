@@ -1,9 +1,12 @@
-package com.example.toeholdTalk;
+package com.example.toeholdTalk.Adapter;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
+
+import com.example.toeholdTalk.Fragment.ChatListFragment;
+import com.example.toeholdTalk.Fragment.FriendListFragment;
 
 public class TabPagerAdapter extends FragmentStatePagerAdapter {
 
