@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.AddFriendActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/addFreindToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addFreindToolbar"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text=" 친구 토홀드 ID" />
+
+    <EditText
+        android:id="@+id/serachFriendEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/textView2" />
+
+    <Button
+        android:id="@+id/serachFriendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/serachFriendEditText"
+        android:layout_marginLeft="10dp"
+        android:text="찾기"
+        android:background="#FFFFFF"/>
+
+</RelativeLayout>

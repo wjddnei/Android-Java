@@ -6,21 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".Fragment.ChatListFragment">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FFDD00"
-        android:minHeight="56dp"
-        android:theme="?attr/actionBarTheme"
-        android:layout_alignParentTop="true"
-        app:title="채팅" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/chatRoomListRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolbar2"
+        android:layout_marginTop="56dp"
         tools:listitem="@layout/chat_item">
 
     </androidx.recyclerview.widget.RecyclerView>

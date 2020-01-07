@@ -1,8 +1,12 @@
 package com.example.toeholdTalk.Fragment;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -12,11 +16,12 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.toeholdTalk.Activity.AddFriendActivity;
+import com.example.toeholdTalk.Adapter.PersonAdapter;
 import com.example.toeholdTalk.Model.MyInfo;
 import com.example.toeholdTalk.Model.Person;
-import com.example.toeholdTalk.Adapter.PersonAdapter;
-import com.example.toeholdTalk.R;
 import com.example.toeholdTalk.Model.wSocket;
+import com.example.toeholdTalk.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -45,6 +50,9 @@ public class FriendListFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
+        //onCreateOptionMenu에서 바뀔 menu 를 승인
+        setHasOptionsMenu(true);
 
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_friend_list,container,false);
 
@@ -84,4 +92,24 @@ public class FriendListFragment extends Fragment {
         }
     };
 
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        menu.clear();
+        inflater.inflate(R.menu.friend_list_menu_top, menu);
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.friendAdditionButton:
+                Intent intent = new Intent(getContext(), AddFriendActivity.class);
+                startActivity(intent);
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 }

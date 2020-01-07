@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_above="@id/relativeLayout"
-        android:layout_margin="40dp"
+        android:layout_margin="50dp"
         app:srcCompat="@drawable/talk_background_icon" />
 
     <RelativeLayout
@@ -52,7 +52,7 @@
                 android:background="@drawable/border"
                 android:ems="10"
                 android:hint="  비밀번호"
-                android:inputType="textPersonName" />
+                android:inputType="textPassword"/>
         </LinearLayout>
 
         <Button
@@ -80,15 +80,5 @@
         android:layout_marginBottom="40dp"
         android:background="#D2B48C"
         android:hint="회원가입" />
-
-    <Button
-        android:id="@+id/tempLoginButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="250dp"
-        android:layout_marginBottom="10dp"
-        android:layout_above="@id/signUpButton"
-        android:background="#D2B48C"
-        android:hint="임시 로그인" />
 
 </RelativeLayout>

@@ -40,7 +40,7 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         ChatList item = items.get(position);
         holder.setItem(item);
-
+        /* onBindViewHolder 안에서 대화방 클릭 리스너를 정의
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,6 +48,7 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
                 context.startActivity(intent);
             }
         });
+         */
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
@@ -59,6 +60,18 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
             nameTextView = itemView.findViewById(R.id.nameTextView);
             messageTextView = itemView.findViewById(R.id.messageTextView);
             cardView = itemView.findViewById(R.id.chatItemCardView);
+
+            //대화방 클릭 리스너
+            cardView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int pos = getAdapterPosition() ;
+                    if (pos != RecyclerView.NO_POSITION) {
+                        Intent intent = new Intent( context , ChatActivity.class);
+                        context.startActivity(intent);
+                    }
+                }
+            });
         }
         public void setItem(ChatList item) {
             nameTextView.setText(item.getFriendName());

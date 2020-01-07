@@ -3,6 +3,8 @@ package com.example.toeholdTalk.Fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -15,8 +17,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.toeholdTalk.Adapter.ChatListAdapter;
 import com.example.toeholdTalk.Model.ChatList;
 import com.example.toeholdTalk.Model.MyInfo;
-import com.example.toeholdTalk.R;
 import com.example.toeholdTalk.Model.wSocket;
+import com.example.toeholdTalk.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -46,6 +48,9 @@ public class ChatListFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
+        //onCreateOptionMenu에서 바뀔 menu 를 승인
+        setHasOptionsMenu(true);
+
         socket = wSocket.get();
         socket.on("resultChatList", resultChatList);
         socket.emit("requestChatList", MyInfo.getMyId());
@@ -60,23 +65,7 @@ public class ChatListFragment extends Fragment {
 
         chatRoomListRecyclerView.setLayoutManager(layoutManager);
 
-        /*
-        adapter.setOnItemClickListener(new ChatListAdapter.OnItemClickListener() {
-            @Override
-            public void onItemClicked(View view, int pos) {
-                Intent intent = new Intent(getActivity(), ChatActivity.class);
-            //  intent.putExtra()
-                startActivity(intent);
-            }
-        });
-
-         */
-
-        // 임시 대화 생성
-
         return rootView;
-
-
     }
 
     Emitter.Listener resultChatList = new Emitter.Listener() {
@@ -89,15 +78,17 @@ public class ChatListFragment extends Fragment {
                     chatList.add(new ChatList(data.getString("id"), data.getString("name"), data.getString("message")));
 
                 }
-
-
                 adapter = new ChatListAdapter(getContext(), chatList);
                 chatRoomListRecyclerView.setAdapter(adapter);
             } catch (JSONException e) {
                 e.printStackTrace();
             }
-
         }
     };
 
+    @Override
+    public void onCreateOptionsMenu(@NonNull Menu menu, @NonNull MenuInflater inflater) {
+        inflater.inflate(R.menu.chat_list_menu_top, menu);
+        super.onCreateOptionsMenu(menu, inflater);
+    }
 }

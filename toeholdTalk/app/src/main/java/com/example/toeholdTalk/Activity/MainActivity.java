@@ -1,6 +1,7 @@
 package com.example.toeholdTalk.Activity;
 
 import android.os.Bundle;
+import androidx.appcompat.widget.Toolbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private FragmentManager fragmentManager;
     private Fragment user, chat, config;
+    private Toolbar toolbar;
 //  private ViewPager viewPager;
 
     Socket socket;
@@ -32,6 +34,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
 
         socket= wSocket.get();
         socket.emit("transferId", MyInfo.getMyId());
@@ -45,13 +51,13 @@ public class MainActivity extends AppCompatActivity {
         fragmentManager.beginTransaction().replace(R.id.fragment, user).commit();
         fragmentManager.beginTransaction().add(R.id.fragment, chat).commit();
         fragmentManager.beginTransaction().hide(chat).commit();
+        setTitle("친구");
 
     }
 
     private void setupTabLayout() {
         tabLayout = findViewById(R.id.tabLayout);
 
-        // 여기 질문
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.person_icon),0,true);
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.chat_icon),1);
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.settings_icon),2);
@@ -64,11 +70,14 @@ public class MainActivity extends AppCompatActivity {
                 switch (pos) {
                     case FRAG_USER:
                         switchFragment(FRAG_USER);
+                        setTitle("친구");
                         break;
                     case FRAG_CHAT:
                         switchFragment(FRAG_CHAT);
+                        setTitle("채팅");
                         break;
                     case FRAG_CONFIG:
+                        setTitle("설정");
                         switchFragment(FRAG_CONFIG);
                         break;
                 }

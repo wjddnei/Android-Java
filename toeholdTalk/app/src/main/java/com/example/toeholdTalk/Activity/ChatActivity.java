@@ -5,13 +5,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.toeholdTalk.Model.ChatContent;
 import com.example.toeholdTalk.Adapter.ChatActivityAdapter;
+import com.example.toeholdTalk.Model.ChatContent;
 import com.example.toeholdTalk.R;
 
 import java.util.ArrayList;
@@ -46,6 +47,10 @@ public class ChatActivity extends AppCompatActivity {
         setContentView(R.layout.activity_chat);
 
         toolbar = findViewById(R.id.toolbar3);
+        setSupportActionBar(toolbar);
+        //친구 이름 받아서 타이틀 설정
+        setTitle("친구 이름");
+        ActionBar abBar = getSupportActionBar() ;
 
         RecyclerView recyclerView = findViewById(R.id.chatListRecyclerView);
         LinearLayoutManager layoutManager =
