@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activity.ProfileActivity">
+    tools:context=".Activity.MyProfileActivity">
 
     <Button
         android:id="@+id/profileExitButton"
@@ -27,7 +27,7 @@
         android:layout_below="@id/personImageView"
         android:layout_centerInParent="true"
         android:layout_margin="10dp"
-        android:text="이승주" />
+        android:text="친구" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/profileBottomNavigation"
@@ -35,6 +35,6 @@
         android:layout_height="56dp"
         android:layout_alignParentBottom="true"
         android:background="#FFBBBBBB"
-        app:menu="@menu/profile_menu_bottom"/>
+        app:menu="@menu/friend_profile_menu_bottom"/>
 
 </RelativeLayout>

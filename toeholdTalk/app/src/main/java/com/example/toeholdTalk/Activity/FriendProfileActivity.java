@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.toeholdTalk.R;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class ProfileActivity extends AppCompatActivity {
+public class FriendProfileActivity extends AppCompatActivity {
 
     Button profileExitButton;
     BottomNavigationView profileBottomNavigation;
@@ -20,7 +20,7 @@ public class ProfileActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile);
+        setContentView(R.layout.activity_friend_profile);
 
         profileBottomNavigation = findViewById(R.id.profileBottomNavigation);
         profileExitButton = findViewById(R.id.profileExitButton);
@@ -42,7 +42,7 @@ public class ProfileActivity extends AppCompatActivity {
                     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                         switch (menuItem.getItemId()) {
                             case R.id.chat_tab:
-                                Intent intent = new Intent(ProfileActivity.this, ChatActivity.class);
+                                Intent intent = new Intent(FriendProfileActivity.this, ChatActivity.class);
                                 startActivity(intent);
                                 return true;
                             case R.id.call_tab:
@@ -56,5 +56,4 @@ public class ProfileActivity extends AppCompatActivity {
         );
 
     }
-
 }

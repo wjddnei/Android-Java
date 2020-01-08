@@ -97,7 +97,6 @@ public class FriendListFragment extends Fragment {
         super.onCreateOptionsMenu(menu, inflater);
         menu.clear();
         inflater.inflate(R.menu.friend_list_menu_top, menu);
-
     }
 
     @Override

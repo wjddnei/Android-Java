@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/chat_tab"
+        android:icon="@drawable/chat_icon"
+        android:title="나와의 채팅"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/edit_tab"
+        android:icon="@drawable/profile_edit_icon"
+        android:title="프로필 편집"
+        app:showAsAction="always" />
+</menu>
