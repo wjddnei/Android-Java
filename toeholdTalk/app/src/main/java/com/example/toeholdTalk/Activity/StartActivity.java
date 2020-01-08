@@ -24,7 +24,7 @@ import io.socket.emitter.Emitter;
 public class StartActivity extends AppCompatActivity {
 
 
-    Button loginButton, signUpButton;
+    Button loginButton, signUpButton, temp_profile_button;
     EditText idEditText, passwordEditText;
     Socket socket;
     int result;
@@ -35,6 +35,7 @@ public class StartActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
+        temp_profile_button = findViewById(R.id.temp_profile_button);
 
         loginButton = findViewById(R.id.loginButton);
         signUpButton = findViewById(R.id.signUpButton);
@@ -44,6 +45,15 @@ public class StartActivity extends AppCompatActivity {
         wSocket.connect();
         socket = wSocket.get();
         socket.on("loginResult",loginResult);
+
+        //임시 프로필 버튼 리스너
+        temp_profile_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(StartActivity.this, ProfileActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
         //로그인 버튼 리스너

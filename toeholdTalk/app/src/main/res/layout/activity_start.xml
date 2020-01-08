@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFDD00"
+    android:background="@drawable/start_activity_background_drawable"
     tools:context=".Activity.StartActivity">
 
     <ImageView
@@ -71,6 +71,18 @@
 
     </RelativeLayout>
 
+    <TextView
+        android:id="@+id/signUpInformationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="71dp"
+        android:layout_marginLeft="71dp"
+        android:layout_marginBottom="55dp"
+        android:text="아직 토홀드 회원이 아니세요?" />
+
     <Button
         android:id="@+id/signUpButton"
         android:layout_width="wrap_content"
@@ -78,7 +90,21 @@
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="250dp"
         android:layout_marginBottom="40dp"
-        android:background="#D2B48C"
+        android:background="#866969"
         android:hint="회원가입" />
+
+
+    <Button
+        android:id="@+id/temp_profile_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="71dp"
+        android:layout_marginRight="71dp"
+        android:layout_marginBottom="112dp"
+        android:background="#866969"
+        android:hint="임시 프로필 버튼" />
 
 </RelativeLayout>
