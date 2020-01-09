@@ -26,8 +26,11 @@ public class ChatActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.backButton :
+            case android.R.id.home: // 뒤로가기 버튼
                 finish();
+                return true;
+            case R.id.searchButton :
+                //내용 찾는 코드 추가
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -48,6 +51,13 @@ public class ChatActivity extends AppCompatActivity {
 
         toolbar = findViewById(R.id.toolbar3);
         setSupportActionBar(toolbar);
+
+        // ↓툴바에 홈버튼을 활성화
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        // ↓툴바의 홈버튼의 이미지를 변경(기본 이미지는 뒤로가기 화살표)
+       // getSupportActionBar().setHomeAsUpIndicator(R.drawable.back_button_icon);
+
+
         //친구 이름 받아서 타이틀 설정
         setTitle("친구 이름");
         ActionBar abBar = getSupportActionBar() ;

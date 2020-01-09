@@ -2,9 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/backButton"
-        android:icon="@drawable/back_button_icon"
-        android:title="뒤로가기"
+        android:id="@+id/searchButton"
+        android:icon="@drawable/search_button_icon"
+        android:title="내용 찾기"
         app:showAsAction="always" />
 
 </menu>
