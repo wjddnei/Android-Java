@@ -66,7 +66,7 @@
             android:layout_marginEnd="4dp"
             android:layout_marginRight="4dp"
             android:layout_marginBottom="4dp"
-            android:background="#886969"
+            android:background="#4682B4"
             android:hint="로그인" />
 
     </RelativeLayout>
@@ -90,34 +90,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginLeft="250dp"
         android:layout_marginBottom="40dp"
-        android:background="#866969"
+        android:background="#4682B4"
         android:hint="회원가입" />
-
-
-    <Button
-        android:id="@+id/temp_friend_profile_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="70dp"
-        android:layout_marginRight="70dp"
-        android:layout_marginBottom="177dp"
-        android:background="#866969"
-        android:hint="임시 친구 프로필 버튼" />
-
-    <Button
-        android:id="@+id/temp_my_profile_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="71dp"
-        android:layout_marginRight="71dp"
-        android:layout_marginBottom="112dp"
-        android:background="#866969"
-        android:hint="임시 내 프로필 버튼" />
 
 </RelativeLayout>

@@ -8,10 +8,10 @@
     tools:context=".Activity.MainActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/mainActivityToolbar"
         android:layout_width="match_parent"
         android:layout_height="56dp"
-        android:background="#FFDD00"
+        android:background="#87CECD"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
 
@@ -29,7 +29,7 @@
         android:layout_height="56dp"
         android:layout_alignParentBottom="true"
         android:animateLayoutChanges="@bool/is_tablet"
-        android:background="#FFDD00"
+        android:background="#87CECD"
         app:layout_constraintBottom_toBottomOf="@id/fragment"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent">

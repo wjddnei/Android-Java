@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -22,6 +23,7 @@ import static java.security.AccessController.getContext;
 public class ChatActivity extends AppCompatActivity {
 
     Toolbar toolbar;
+    MenuItem mSearch;
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
@@ -29,7 +31,7 @@ public class ChatActivity extends AppCompatActivity {
             case android.R.id.home: // 뒤로가기 버튼
                 finish();
                 return true;
-            case R.id.searchButton :
+            case R.id.chatSearchView :
                 //내용 찾는 코드 추가
                 return true;
             default:
@@ -40,6 +42,25 @@ public class ChatActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.chat_menu_top, menu);
+
+        //searchView 세팅
+        mSearch = menu.findItem(R.id.chatSearchView);
+        SearchView searchView = (SearchView) mSearch.getActionView();
+        searchView.setQueryHint("검색");
+        //확인 버튼 활성화
+        searchView.setSubmitButtonEnabled(true);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
+
         return true;
     }
 
@@ -52,9 +73,9 @@ public class ChatActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar3);
         setSupportActionBar(toolbar);
 
-        // ↓툴바에 홈버튼을 활성화
+        // 툴바에 홈버튼을 활성화
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        // ↓툴바의 홈버튼의 이미지를 변경(기본 이미지는 뒤로가기 화살표)
+        // 툴바의 홈버튼의 이미지를 변경(기본 이미지는 뒤로가기 화살표)
        // getSupportActionBar().setHomeAsUpIndicator(R.drawable.back_button_icon);
 
 

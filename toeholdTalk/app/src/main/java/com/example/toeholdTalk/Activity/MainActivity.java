@@ -1,17 +1,18 @@
 package com.example.toeholdTalk.Activity;
 
 import android.os.Bundle;
-import androidx.appcompat.widget.Toolbar;
+import android.view.MenuInflater;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import com.example.toeholdTalk.Fragment.ChatListFragment;
 import com.example.toeholdTalk.Fragment.FriendListFragment;
 import com.example.toeholdTalk.Model.MyInfo;
-import com.example.toeholdTalk.R;
 import com.example.toeholdTalk.Model.wSocket;
+import com.example.toeholdTalk.R;
 import com.google.android.material.tabs.TabLayout;
 
 import io.socket.client.Socket;
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private TabLayout tabLayout;
     private FragmentManager fragmentManager;
     private Fragment user, chat, config;
-    private Toolbar toolbar;
+    private Toolbar mainActivityToolbar;
 //  private ViewPager viewPager;
 
     Socket socket;
@@ -35,8 +36,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        mainActivityToolbar = findViewById(R.id.mainActivityToolbar);
+        setSupportActionBar(mainActivityToolbar);
 
 
         socket= wSocket.get();

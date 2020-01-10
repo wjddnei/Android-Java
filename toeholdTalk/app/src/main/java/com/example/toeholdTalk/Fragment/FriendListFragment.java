@@ -1,8 +1,11 @@
 package com.example.toeholdTalk.Fragment;
 
 
+import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -12,6 +15,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -42,6 +46,8 @@ public class FriendListFragment extends Fragment {
     ArrayList<Person> personList;
     PersonAdapter adapter;
     RecyclerView friendListView;
+    private SearchView searchView = null;
+    private SearchView.OnQueryTextListener queryTextListener;
 
     public FriendListFragment() {
         // Required empty public constructor
@@ -51,7 +57,6 @@ public class FriendListFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        //onCreateOptionMenu에서 바뀔 menu 를 승인
         setHasOptionsMenu(true);
 
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_friend_list,container,false);
@@ -68,7 +73,6 @@ public class FriendListFragment extends Fragment {
         socket.emit("requestFriendList", MyInfo.getMyId());
 
         personList = new ArrayList<>();
-
 
         return rootView;
     }
@@ -97,6 +101,21 @@ public class FriendListFragment extends Fragment {
         super.onCreateOptionsMenu(menu, inflater);
         menu.clear();
         inflater.inflate(R.menu.friend_list_menu_top, menu);
+
+        //searchView 세팅
+        SearchView searchView = (SearchView) menu.findItem(R.id.friendListSearchView).getActionView();
+        searchView.setQueryHint("검색");
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+            @Override
+            public boolean onQueryTextChange(String s) {
+                return false;
+            }
+        });
+
     }
 
     @Override
