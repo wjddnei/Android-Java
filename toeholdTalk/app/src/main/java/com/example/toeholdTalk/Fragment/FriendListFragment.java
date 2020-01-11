@@ -67,7 +67,6 @@ public class FriendListFragment extends Fragment {
 
         friendListView.setLayoutManager(layoutManager);
 
-
         socket = wSocket.get();
         socket.on("resultFriendList", resultFriendList);
         socket.emit("requestFriendList", MyInfo.getMyId());
@@ -85,9 +84,8 @@ public class FriendListFragment extends Fragment {
                 for(int i=0; i<receivedData.length(); ++i) {
                     JSONObject data = receivedData.getJSONObject(i);
                     personList.add(new Person(data.getString("id"), data.getString("name")));
-
                 }
-                adapter = new PersonAdapter(personList);
+                adapter = new PersonAdapter(getContext(), personList);
                 friendListView.setAdapter(adapter);
             } catch (JSONException e) {
                 e.printStackTrace();

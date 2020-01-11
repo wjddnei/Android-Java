@@ -1,13 +1,18 @@
 package com.example.toeholdTalk.Adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.toeholdTalk.Activity.ChatActivity;
+import com.example.toeholdTalk.Activity.FriendProfileActivity;
 import com.example.toeholdTalk.Model.Person;
 import com.example.toeholdTalk.R;
 
@@ -15,9 +20,11 @@ import java.util.ArrayList;
 
 public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder> {
 
-    ArrayList<Person> items = new ArrayList<Person>();
+    Context context;
+    ArrayList<Person> items;
 
-    public PersonAdapter(ArrayList<Person> personList) {
+    public PersonAdapter(Context context, ArrayList<Person> personList) {
+        this.context = context;
         items = personList;
     }
 
@@ -41,13 +48,27 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
         return items.size();
     }
 
-    static class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView personTextView;
+        CardView personItemCardView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             personTextView = itemView.findViewById(R.id.personTextView);
+            personItemCardView = itemView.findViewById(R.id.personItemCardView);
+
+            //친구 프로필 클릭 리스너
+            personItemCardView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int pos = getAdapterPosition() ;
+                    if (pos != RecyclerView.NO_POSITION) {
+                        Intent intent = new Intent( context , FriendProfileActivity.class);
+                        context.startActivity(intent);
+                    }
+                }
+            });
         }
         public void setItem(Person item) {
             personTextView.setText(item.getName());

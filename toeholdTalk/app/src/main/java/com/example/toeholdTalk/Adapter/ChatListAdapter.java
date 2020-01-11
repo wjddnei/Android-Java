@@ -54,15 +54,15 @@ public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHo
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView nameTextView, messageTextView;
-        CardView cardView;
+        CardView chatItemCardView;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             nameTextView = itemView.findViewById(R.id.nameTextView);
             messageTextView = itemView.findViewById(R.id.messageTextView);
-            cardView = itemView.findViewById(R.id.chatItemCardView);
+            chatItemCardView = itemView.findViewById(R.id.chatItemCardView);
 
             //대화방 클릭 리스너
-            cardView.setOnClickListener(new View.OnClickListener() {
+            chatItemCardView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     int pos = getAdapterPosition() ;

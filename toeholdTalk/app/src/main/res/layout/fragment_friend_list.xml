@@ -6,11 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".Fragment.FriendListFragment">
 
+    <TextView
+        android:id="@+id/friendsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:text="친구" />
+
+    <TextView
+        android:id="@+id/friendsNumbersTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/friendsTextView"
+        android:text="n명" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/friendListView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="56dp"
+        android:layout_below="@id/friendsTextView"
         tools:listitem="@layout/person_item">
 
 
