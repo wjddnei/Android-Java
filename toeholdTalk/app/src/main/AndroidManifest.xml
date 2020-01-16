@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activity.FriendProfileActivity"></activity>
+        <activity android:name=".Activity.ProfileUpdateActivity"></activity>
+        <activity android:name=".Activity.FriendProfileActivity" />
         <activity android:name=".Activity.AddFriendActivity" />
         <activity android:name=".Activity.MyProfileActivity" />
         <activity android:name=".Activity.ChatActivity" />

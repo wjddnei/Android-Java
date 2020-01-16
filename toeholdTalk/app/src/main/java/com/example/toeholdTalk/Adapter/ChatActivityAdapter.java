@@ -1,5 +1,7 @@
 package com.example.toeholdTalk.Adapter;
 
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,34 +12,39 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.toeholdTalk.Activity.FriendProfileActivity;
 import com.example.toeholdTalk.Model.ChatContent;
+import com.example.toeholdTalk.Model.MyInfo;
 import com.example.toeholdTalk.R;
+import com.example.toeholdTalk.Util.HandleTime;
+import com.squareup.picasso.Picasso;
 
 import java.security.AccessControlContext;
 import java.util.ArrayList;
-
 public class ChatActivityAdapter extends RecyclerView.Adapter<ChatActivityAdapter.ViewHolder> {
-
-    private SharedPreferences preferences;
-    private AccessControlContext context;
+    private Context context;
     private ArrayList<ChatContent> items;
+    private String imageUrl;
+    public static final int CHAT_LEFT=0;
+    public static final int CHAT_RIGHT=1;
 
-    public ChatActivityAdapter(AccessControlContext context) {
+    public ChatActivityAdapter(Context context, ArrayList<ChatContent> items, String imageUrl) {
         this.context = context;
+        this.items= items;
+        this.imageUrl = imageUrl;
     }
 
     @NonNull
     @Override
     public ChatActivityAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-
         switch (viewType) {
             // viewType이 0이면 내 채팅 레이아웃을 담은 holder를 리턴
-            case 0:
+            case CHAT_RIGHT:
                 View myItemView = inflater.inflate(R.layout.my_chat_item, parent, false);
                 return new ViewHolder(myItemView);
             // viewType이 1이면 친구 채팅 레이아웃을 담은 holder를 리턴
-            case 1:
+            case CHAT_LEFT:
                 View partnerItemView = inflater.inflate(R.layout.partner_chat_item, parent, false);
                 return new ViewHolder(partnerItemView);
             default:
@@ -65,44 +72,36 @@ public class ChatActivityAdapter extends RecyclerView.Adapter<ChatActivityAdapte
         TextView partnerName;
         TextView partnerChatContent;
         TextView partnerChatTime;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.myName);
-            chatContent = itemView.findViewById(R.id.partnerChatContent);
-            chatTime = itemView.findViewById(R.id.partnerChatTime);
+            chatContent = itemView.findViewById(R.id.ChatContent);
+            chatTime = itemView.findViewById(R.id.ChatTime);
             partnerImage = itemView.findViewById(R.id.partnerImage);
             partnerName = itemView.findViewById(R.id.partnerName);
             partnerChatContent = itemView.findViewById(R.id.partnerChatContent);
             partnerChatTime = itemView.findViewById(R.id.partnerChatTime);
         }
 
-        public void setItem(ChatContent item) {
-            name.setText(item.getName());
-            chatContent.setText(item.getChat());
-            chatTime.setText(item.getTime());
+        public void setItem(final ChatContent item) {
+            if(item.getReceiver().equals(MyInfo.getMyId())){
+                partnerName.setText(item.getSender());
+                partnerChatContent.setText(item.getMessage());
+                partnerChatTime.setText(HandleTime.toSimpleFormat(item.getTime()));
+                if(!imageUrl.equals("")) Picasso.get().load("http://45.32.38.196:5000/"+ imageUrl).fit().into(partnerImage);
+            }
+            else{
+                name.setText(item.getReceiver());
+                chatContent.setText(item.getMessage());
+                chatTime.setText(HandleTime.toSimpleFormat(item.getTime()));
+            }
         }
     }
 
     @Override
     public int getItemViewType(int position) {
-    //    preferences = context.getSharedPreferences("USERSIGN", Context.MODE_PRIVATE);
-        return who(preferences, position)? 0: 1;
-    }
-
-    private boolean who(SharedPreferences preferences, int position) {
-        //내 아이디와 arraylist의 name이 같다면 내꺼 아니면 상대꺼
-        /*
-        if (items.get(position).getName() == JSon.getString("name","")) {
-            return false;
-        }
-         */
-        return true;
-    }
-
-    public ArrayList<ChatContent> getItems() {
-        return items;
-    }
-    public void setItems(ArrayList<ChatContent> param) {
-        this.items = param;
+        if(items.get(position).getSender().equals(MyInfo.getMyId())) return CHAT_RIGHT;
+        else return CHAT_LEFT;
     }
 }

@@ -42,7 +42,7 @@
                 android:layout_height="50dp"
                 android:background="@drawable/border"
                 android:ems="10"
-                android:hint="  토홀드 계정 (이메일)"
+                android:hint="토홀드계정"
                 android:inputType="textPersonName" />
 
             <EditText
@@ -51,7 +51,7 @@
                 android:layout_height="50dp"
                 android:background="@drawable/border"
                 android:ems="10"
-                android:hint="  비밀번호"
+                android:hint="비밀번호"
                 android:inputType="textPassword"/>
         </LinearLayout>
 

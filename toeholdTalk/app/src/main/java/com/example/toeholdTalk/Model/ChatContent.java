@@ -3,44 +3,45 @@ package com.example.toeholdTalk.Model;
 import androidx.annotation.NonNull;
 
 public class ChatContent {
+        String sender, receiver, message, time;
 
-    private String name;
-    private String chat;
-    private String time;
+        public ChatContent(String sender, String receiver, String message, String time) {
+            this.sender = sender;
+            this.receiver = receiver;
+            this.message = message;
+            this.time = time;
+        }
 
-    public ChatContent(String name, String chat, String time) {
-        this.name = name;
-        this.chat = chat;
-        this.time = time;
-    }
+        public String getSender() {
+            return sender;
+        }
 
+        public void setSender(String sender) {
+            this.sender = sender;
+        }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-    public void setChat(String chat) {
-        this.chat = chat;
-    }
-    public void setTime(String time) {
-        this.time = time;
-    }
+        public String getReceiver() {
+            return receiver;
+        }
 
-    public String getName() {
-        return name;
-    }
-    public String getChat() {
-        return chat;
-    }
-    public String getTime() {
-        return time;
-    }
+        public void setReceiver(String receiver) {
+            this.receiver = receiver;
+        }
 
-    @Override
-    public String toString() {
-        return "ChatContent{" +
-                "name='" + name + '\'' +
-                ", chat='" + chat + '\'' +
-                ", time='" + time + '\'' +
-                '}';
-    }
+        public String getMessage() {
+            return message;
+        }
+
+        public void setMessage(String message) {
+            this.message = message;
+        }
+
+        public String getTime() {
+            return time;
+        }
+
+        public void setTime(String time) {
+            this.time = time;
+        }
+
 }

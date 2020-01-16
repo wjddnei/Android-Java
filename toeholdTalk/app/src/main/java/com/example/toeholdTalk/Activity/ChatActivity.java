@@ -3,6 +3,9 @@ package com.example.toeholdTalk.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
@@ -14,21 +17,37 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.toeholdTalk.Adapter.ChatActivityAdapter;
 import com.example.toeholdTalk.Model.ChatContent;
+import com.example.toeholdTalk.Model.MyInfo;
+import com.example.toeholdTalk.Model.wSocket;
 import com.example.toeholdTalk.R;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+
+import io.socket.client.Socket;
+import io.socket.emitter.Emitter;
 
 import static java.security.AccessController.getContext;
 
 public class ChatActivity extends AppCompatActivity {
-
     Toolbar toolbar;
+    EditText editText;
+    Button sendButton;
     MenuItem mSearch;
+    String yourId, yourName, yourImageUrl;
+    Socket socket;
+    RecyclerView recyclerView;
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home: // 뒤로가기 버튼
+                socket.emit("requestChatList", MyInfo.getMyId());
                 finish();
                 return true;
             case R.id.chatSearchView :
@@ -80,22 +99,94 @@ public class ChatActivity extends AppCompatActivity {
 
 
         //친구 이름 받아서 타이틀 설정
-        setTitle("친구 이름");
         ActionBar abBar = getSupportActionBar() ;
 
-        RecyclerView recyclerView = findViewById(R.id.chatListRecyclerView);
+        editText = findViewById(R.id.ChatEditText);
+        sendButton = findViewById(R.id.sendButton);
+
+        recyclerView = findViewById(R.id.chatListRecyclerView);
         LinearLayoutManager layoutManager =
                 new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
+        layoutManager.setStackFromEnd(true);
         recyclerView.setLayoutManager(layoutManager);
 
-        //더미 대화 생성
-        ArrayList<ChatContent> chatContents = new ArrayList<>();
-        chatContents.add(new ChatContent("이승주","안녕","오후 5:50"));
+        yourId=getIntent().getStringExtra("yourId");
+        yourName=getIntent().getStringExtra("yourName");
+        yourImageUrl=getIntent().getStringExtra("yourImageUrl");
+
+        setTitle(yourName);
+        socket=wSocket.get();
+        JSONObject jsonObject=new JSONObject();
+
+        try{
+            jsonObject.put("myId", MyInfo.getMyId());
+            jsonObject.put("yourId", yourId);
+            socket.emit("messageInfo", jsonObject);
+            socket.emit("clearUnchecked", jsonObject);
+            //System.out.println("messageInfo called");
+        }catch(JSONException e){
+            e.printStackTrace();
+        }
+        socket.on("update", updateChat);
+
+        sendButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sendMessage();
+            }
+        });
+
+    }
+
+    private Emitter.Listener updateChat=new Emitter.Listener() {
+        @Override
+        public void call(Object... args) {
+            final ArrayList<ChatContent> mMessages=new ArrayList<>();
+
+            JSONArray receivedData=(JSONArray) args[0];
+            try{
+                for(int i=0; i<receivedData.length(); i++){
+                    JSONObject data=receivedData.getJSONObject(i);
+                    //System.out.println(data.toString());
+                    mMessages.add(new ChatContent(data.getString("sender"), data.getString("receiver"), data.getString("message"), data.getString("time")));
+                }
+
+                runOnUiThread(new Runnable(){
+                    @Override
+                    public void run(){
+                        recyclerView.setAdapter(new ChatActivityAdapter(ChatActivity.this, mMessages, yourImageUrl));
+                    }
+                });
+
+            }catch (JSONException e){
+                e.printStackTrace();
+            }
+        }
+    };
 
 
-        ChatActivityAdapter adapter = new ChatActivityAdapter(getContext());
-        adapter.setItems(chatContents);
+    public void sendMessage(){
+        String message=editText.getText().toString();
+        JSONObject data=new JSONObject();
+        try{
+            Date time=new Date();
+            SimpleDateFormat format=new SimpleDateFormat("yyyy-MM-dd H:mm:ss");
+            data.put("sender", MyInfo.getMyId());
+            data.put("senderName", MyInfo.getMyName());
+            data.put("receiver", yourId);
+            data.put("receiverName", yourName);
+            data.put("message", message);
+            data.put("time", format.format(time));
+            socket.emit("sendMessage", data);
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+        editText.setText("");
+    }
 
-        recyclerView.setAdapter(adapter);
+    @Override
+    public void onBackPressed() {
+        socket.emit("requestChatList", MyInfo.getMyId());
+        finish();
     }
 }
