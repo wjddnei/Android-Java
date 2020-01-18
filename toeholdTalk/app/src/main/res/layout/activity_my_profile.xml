@@ -13,10 +13,10 @@
         android:layout_margin="10dp"
         android:background="@drawable/x_button_icon" />
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/personImageView"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_centerInParent="true"
         app:srcCompat="@drawable/user_icon" />
 
@@ -27,7 +27,8 @@
         android:layout_below="@id/personImageView"
         android:layout_centerInParent="true"
         android:layout_margin="10dp"
-        android:text="이승주" />
+        android:text="이승주"
+        android:textSize="25dp"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/profileBottomNavigation"

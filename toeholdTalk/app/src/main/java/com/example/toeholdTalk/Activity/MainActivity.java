@@ -2,6 +2,9 @@ package com.example.toeholdTalk.Activity;
 
 import android.os.Bundle;
 import android.view.MenuInflater;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -27,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private FragmentManager fragmentManager;
     private Fragment user, chat, config;
     private Toolbar mainActivityToolbar;
+
 //  private ViewPager viewPager;
 
     Socket socket;
@@ -57,8 +61,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void setupTabLayout() {
-        tabLayout = findViewById(R.id.tabLayout);
-
+        tabLayout = findViewById(R.id.main_tabLayout);
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.person_icon),0,true);
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.chat_icon),1);
         tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.settings_icon),2);

@@ -19,11 +19,12 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/imageView"
-                android:layout_width="45dp"
+                android:layout_width="43dp"
                 android:layout_height="45dp"
                 android:padding="5dp"
+                android:src="@drawable/user_icon"
                 app:srcCompat="@drawable/user_icon" />
 
             <TextView

@@ -8,6 +8,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -17,21 +19,27 @@ import androidx.appcompat.widget.Toolbar;
 import com.example.toeholdTalk.Model.MyInfo;
 import com.example.toeholdTalk.Model.wSocket;
 import com.example.toeholdTalk.R;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import io.socket.client.Socket;
 import io.socket.emitter.Emitter;
 
 public class AddFriendActivity extends AppCompatActivity {
 
     EditText serachFriendEditText;
-    Button serachFriendButton;
+    Button serachFriendButton, addFriendButton;
     Toolbar toolbar;
     String myId;
     Socket socket;
-    int result;
+    LinearLayout layoutFound, layoutNotFound;
+    CircleImageView profileImageView;
+    TextView profileTextView;
+
+    String yourId, yourName, yourImageUrl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +48,6 @@ public class AddFriendActivity extends AppCompatActivity {
         setTitle("토홀드 ID로 추가");
 
         socket = wSocket.get();
-        socket.on("searchFreind", searchFreind); //registerResult 핸들러
 
         toolbar = findViewById(R.id.addFreindToolbar);
         setSupportActionBar(toolbar);
@@ -51,53 +58,87 @@ public class AddFriendActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String txt_id = serachFriendEditText.getText().toString();
-                findFreindId(txt_id);
+                socket.on("resultSearchId", resultSearchId);
+                socket.emit("searchId", txt_id);
             }
         });
 
+        addFriendButton = findViewById(R.id.addButton);
+        addFriendButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                add(MyInfo.getMyId(), yourId, yourName);
+            }
+        });
+
+        layoutFound = findViewById(R.id.resultFoundLinerLayout);
+        layoutNotFound = findViewById(R.id.resultNotFoundLinearLayout);
+        profileTextView = findViewById(R.id.profileName);
+        profileImageView = findViewById(R.id.profileImage);
+
     }
 
-    private void findFreindId(String id) {
-        try {
-            JSONObject registerInfo = new JSONObject();
-            registerInfo.put("id", id);
-            myId = id;
-            socket.emit("register", registerInfo);
+    private Emitter.Listener resultSearchId=new Emitter.Listener() {
+        @Override
+        public void call(Object... args) {
+            final JSONObject data=(JSONObject)args[0];
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    try{
+                        if(!data.getString("id").equals("")){
+                            layoutFound.setVisibility(View.VISIBLE);
+                            layoutNotFound.setVisibility(View.GONE);
+                            yourId = data.getString("id");
+                            yourName = data.getString("name");
+                            yourImageUrl = data.getString("imageUrl");
+                            profileTextView.setText(yourId);
+                            if(!yourImageUrl.equals("")) Picasso.get().load("http://45.32.38.196:5000/"+ yourImageUrl).fit().into(profileImageView);
+                        }
+                        else{
+                            layoutNotFound.setVisibility(View.VISIBLE);
+                            layoutFound.setVisibility(View.GONE);
+                        }
+                    } catch (Exception e){
+                        e.printStackTrace();
+                    }
+                }
+            });
+        }
+    };
 
-        } catch (JSONException e) {
+    public void add(String myId, String yourId, String yourName){
+        socket.on("resultAddFriend", resultAddFriend);
+        JSONObject user=new JSONObject();
+        try{
+            user.put("myId", myId);
+            user.put("yourId", yourId);
+            user.put("yourName", yourName);
+            socket.emit("addFriend", user);
+        }catch (JSONException e){
             e.printStackTrace();
         }
     }
 
-    private Emitter.Listener searchFreind = new Emitter.Listener() {
+
+    private Emitter.Listener resultAddFriend=new Emitter.Listener() {
         @Override
         public void call(Object... args) {
-            JSONObject receivedData = (JSONObject)args[0]; //(args가 1개로 서버에서 세팅)
-            result = -1;
-
-            try {
-                result = receivedData.getInt("result");
-            }catch (JSONException e) {
-                e.printStackTrace();
-            }
-
-            /*결과값에 따라 다른 토스트 메시지 출력*/
+            final int res=(Integer)args[0];
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    switch (result) {
+                    switch(res){
+                        case 0:
+                            Toast.makeText(AddFriendActivity.this, "서버 에러", Toast.LENGTH_SHORT).show();
+                            break;
                         case 1:
-                            Toast.makeText(AddFriendActivity.this, "아이디가 존재하지 않습니다.", Toast.LENGTH_SHORT).show();
-                            serachFriendEditText.setText("");
+                            Toast.makeText(AddFriendActivity.this, "이 ID와 이미 친구입니다.", Toast.LENGTH_SHORT).show();
                             break;
                         case 2:
-                            Toast.makeText(AddFriendActivity.this, "친구 추가에 성공하였습니다.", Toast.LENGTH_SHORT).show();
-                            MyInfo.setMyId(myId);
+                            Toast.makeText(AddFriendActivity.this, "친구 추가 완료", Toast.LENGTH_SHORT).show();
+                            socket.emit("requestFriendList", MyInfo.getMyId());
                             finish();
-                            break;
-                        default:
-                            Toast.makeText(AddFriendActivity.this, "서버 에러", Toast.LENGTH_SHORT).show();
-                            serachFriendEditText.setText("");
                             break;
                     }
                 }

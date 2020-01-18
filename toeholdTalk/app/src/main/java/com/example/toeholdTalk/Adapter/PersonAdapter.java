@@ -15,8 +15,11 @@ import com.example.toeholdTalk.Activity.ChatActivity;
 import com.example.toeholdTalk.Activity.FriendProfileActivity;
 import com.example.toeholdTalk.Model.Person;
 import com.example.toeholdTalk.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder> {
 
@@ -39,8 +42,19 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        Person item = items.get(position);
+        final Person item = items.get(position);
         holder.setItem(item);
+        if(!item.getImageUrl().equals("")) Picasso.get().load("http://45.32.38.196:5000/"+item.getImageUrl()).fit().into(holder.imageView);
+        holder.personItemCardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context , FriendProfileActivity.class);
+                intent.putExtra("friendName", item.getName());
+                intent.putExtra("friendImageUrl", item.getImageUrl());
+                intent.putExtra("friendId", item.getId());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -49,26 +63,15 @@ public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-
         TextView personTextView;
         CardView personItemCardView;
+        CircleImageView imageView;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             personTextView = itemView.findViewById(R.id.personTextView);
             personItemCardView = itemView.findViewById(R.id.personItemCardView);
-
-            //친구 프로필 클릭 리스너
-            personItemCardView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    int pos = getAdapterPosition() ;
-                    if (pos != RecyclerView.NO_POSITION) {
-                        Intent intent = new Intent( context , FriendProfileActivity.class);
-                        context.startActivity(intent);
-                    }
-                }
-            });
+            imageView = itemView.findViewById(R.id.imageView);
         }
         public void setItem(Person item) {
             personTextView.setText(item.getName());
