@@ -62,9 +62,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupTabLayout() {
         tabLayout = findViewById(R.id.main_tabLayout);
-        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.person_icon),0,true);
-        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.chat_icon),1);
-        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.settings_icon),2);
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.person_icon_1),0,true);
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.chat_icon_1),1);
+        tabLayout.addTab(tabLayout.newTab().setIcon(R.drawable.settings_icon_1),2);
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
