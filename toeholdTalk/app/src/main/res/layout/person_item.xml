@@ -21,16 +21,17 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/imageView"
-                android:layout_width="43dp"
-                android:layout_height="45dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:padding="5dp"
-                android:src="@drawable/user_icon"
-                app:srcCompat="@drawable/user_icon" />
+                android:src="@drawable/tt_img_2"
+                app:srcCompat="@drawable/tt_img_2" />
 
             <TextView
                 android:id="@+id/personTextView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
                 android:background="#00ff0000"
                 android:gravity="left"
                 android:text="이름"

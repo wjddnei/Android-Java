@@ -10,6 +10,7 @@
         android:id="@+id/addFreindToolbar"
         android:layout_width="match_parent"
         android:layout_height="56dp"
+        android:background="#8598b0"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
 
@@ -18,28 +19,32 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/addFreindToolbar"
-        android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
-        android:text=" 친구 토홀드 ID" />
+        android:layout_marginTop="10dp"
+        android:text=" 친구 토홀드 ID"
+        android:textSize="15dp" />
 
     <EditText
         android:id="@+id/serachFriendEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
+        android:layout_below="@id/textView2"
         android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
-        android:layout_below="@id/textView2" />
+        android:ems="10"
+        android:inputType="textPersonName" />
 
     <Button
         android:id="@+id/serachFriendButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/serachFriendEditText"
-        android:layout_marginLeft="10dp"
-        android:text="찾기"
-        android:background="#FFFFFF"/>
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#8598b0"
+        android:text="찾기" />
 
     <LinearLayout
         android:id="@+id/resultFoundLinerLayout"
