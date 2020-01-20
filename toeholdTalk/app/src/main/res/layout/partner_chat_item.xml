@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
     android:orientation="vertical">
 
     <androidx.cardview.widget.CardView
@@ -18,10 +19,10 @@
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/partnerImage"
-                android:layout_width="70sp"
-                android:layout_height="70sp"
+                android:layout_width="104dp"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:src="@drawable/person_icon" />
+                android:src="@drawable/tt_img_2" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -36,23 +37,27 @@
                     android:layout_marginLeft="10dp"
                     android:text="이승주"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textSize="18sp" />
+                    android:textSize="15dp" />
 
                 <TextView
                     android:id="@+id/partnerChatContent"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#416281"
                     android:gravity="center_vertical"
                     android:padding="5dp"
                     android:text="친구가 입력한 내용"
+                    android:textColor="#ffff"
                     android:textSize="20sp" />
 
                 <TextView
                     android:id="@+id/partnerChatTime"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
+                    android:layout_marginLeft="10dp"
                     android:gravity="center_vertical"
                     android:text="시간" />
 

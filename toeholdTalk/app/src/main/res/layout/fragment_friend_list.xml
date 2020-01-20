@@ -9,26 +9,27 @@
 
     <LinearLayout
         android:id="@+id/profile"
-        android:padding="5dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:background="#8598B0"
         android:gravity="center"
-        >
+        android:orientation="horizontal"
+        android:padding="5dp">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/image"
-            android:src="@drawable/user_icon"
             android:layout_width="50dp"
-            android:layout_height="50dp" />
+            android:layout_height="50dp"
+            android:src="@drawable/tt_img" />
 
         <TextView
             android:id="@+id/name"
-            android:layout_marginLeft="5dp"
-            android:text="name"
-            android:textSize="25dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="name"
+            android:textColor="#000000"
+            android:textSize="25dp" />
     </LinearLayout>
 
 
@@ -36,8 +37,9 @@
         android:id="@+id/friendsTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
         android:layout_below="@+id/profile"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:text="친구 0명" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -45,6 +47,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/friendsTextView"
+        android:layout_marginTop="10dp"
         tools:listitem="@layout/person_item">
 
 

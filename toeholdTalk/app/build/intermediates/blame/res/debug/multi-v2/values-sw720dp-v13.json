@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\comd119\\Documents\\GitHub\\Android-Java\\toeholdTalk\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+            "outputFile": "C:\\Users\\wjddn\\Documents\\GitHub\\Android-Java\\toeholdTalk\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-sw720dp-v13\\values-sw720dp-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\comd119\\.gradle\\caches\\transforms-2\\files-2.1\\702f44af839705bfe5a45f261b5bb783\\mediarouter-1.1.0\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
+                    "source": "C:\\Users\\wjddn\\.gradle\\caches\\transforms-2\\files-2.1\\702f44af839705bfe5a45f261b5bb783\\mediarouter-1.1.0\\res\\values-sw720dp-v13\\values-sw720dp-v13.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",
