@@ -58,6 +58,7 @@ public class FriendProfileActivity extends AppCompatActivity {
                                 intent.putExtra("yourName", name);
                                 intent.putExtra("yourImageUrl", imageUrl);
                                 startActivity(intent);
+                                finish();
                                 return true;
                             case R.id.call_tab:
                                 // 아직 작성 안함

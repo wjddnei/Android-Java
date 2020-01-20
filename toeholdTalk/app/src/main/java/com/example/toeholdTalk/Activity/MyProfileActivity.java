@@ -53,6 +53,8 @@ public class MyProfileActivity extends AppCompatActivity {
                             case R.id.chat_tab:
                                 Intent intent = new Intent(MyProfileActivity.this, ChatActivity.class);
                                 startActivity(intent);
+                                finish();
+                                
                                 return true;
                             case R.id.edit_tab:
                                 Intent intent2 = new Intent(MyProfileActivity.this, ProfileUpdateActivity.class);

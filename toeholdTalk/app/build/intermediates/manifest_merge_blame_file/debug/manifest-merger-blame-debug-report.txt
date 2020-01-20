@@ -6,93 +6,93 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="15"
-8-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml
+8-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="29" />
-9-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml
+9-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml
 10
 11    <uses-permission android:name="android.permission.INTERNET" />
-11-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:5:5-67
-11-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:5:22-64
+11-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:5:5-67
+11-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:5:22-64
 12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-12-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:6:5-79
-12-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:6:22-76
+12-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:6:5-79
+12-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:6:22-76
 13    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-13-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:7:5-81
-13-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:7:22-78
+13-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:7:5-81
+13-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:7:22-78
 14    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-14-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:8:5-80
-14-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:8:22-77
+14-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:8:5-80
+14-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:8:22-77
 15
 16    <application
-16-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:10:5-34:19
+16-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:10:5-34:19
 17        android:allowBackup="true"
-17-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:11:9-35
+17-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:11:9-35
 18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-18-->[androidx.core:core:1.1.0] C:\Users\wjddn\.gradle\caches\transforms-2\files-2.1\c527b78844be871c44103f6f45a963fb\core-1.1.0\AndroidManifest.xml:24:18-86
+18-->[androidx.core:core:1.1.0] C:\Users\comd119\.gradle\caches\transforms-2\files-2.1\c527b78844be871c44103f6f45a963fb\core-1.1.0\AndroidManifest.xml:24:18-86
 19        android:debuggable="true"
 20        android:icon="@mipmap/ic_launcher"
-20-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:12:9-43
+20-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:12:9-43
 21        android:label="@string/app_name"
-21-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:13:9-41
+21-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:13:9-41
 22        android:roundIcon="@mipmap/ic_launcher_round"
-22-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:14:9-54
+22-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:14:9-54
 23        android:supportsRtl="true"
-23-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:15:9-35
+23-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:15:9-35
 24        android:testOnly="true"
 25        android:theme="@style/AppTheme"
-25-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:16:9-40
+25-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:16:9-40
 26        android:usesCleartextTraffic="true" >
-26-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:17:9-44
+26-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:17:9-44
 27        <activity android:name="com.example.toeholdTalk.Activity.ProfileUpdateActivity" />
-27-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:18:9-77
-27-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:18:19-65
+27-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:18:9-77
+27-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:18:19-65
 28        <activity android:name="com.example.toeholdTalk.Activity.FriendProfileActivity" />
-28-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:19:9-68
-28-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:19:19-65
+28-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:19:9-68
+28-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:19:19-65
 29        <activity android:name="com.example.toeholdTalk.Activity.AddFriendActivity" />
-29-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:20:9-64
-29-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:20:19-61
+29-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:20:9-64
+29-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:20:19-61
 30        <activity android:name="com.example.toeholdTalk.Activity.MyProfileActivity" />
-30-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:21:9-64
-30-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:21:19-61
+30-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:21:9-64
+30-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:21:19-61
 31        <activity android:name="com.example.toeholdTalk.Activity.ChatActivity" />
-31-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:22:9-59
-31-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:22:19-56
+31-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:22:9-59
+31-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:22:19-56
 32        <activity android:name="com.example.toeholdTalk.Activity.RegisterActivity" />
-32-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:23:9-63
-32-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:23:19-60
+32-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:23:9-63
+32-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:23:19-60
 33        <activity android:name="com.example.toeholdTalk.Activity.StartActivity" >
-33-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:24:9-30:20
-33-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:24:19-57
+33-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:24:9-30:20
+33-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:24:19-57
 34            <intent-filter>
-34-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:25:13-29:29
+34-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:25:13-29:29
 35                <action android:name="android.intent.action.MAIN" />
-35-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:26:17-69
-35-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:26:25-66
+35-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:26:17-69
+35-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:26:25-66
 36
 37                <category android:name="android.intent.category.LAUNCHER" />
-37-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:28:17-77
-37-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:28:27-74
+37-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:28:17-77
+37-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:28:27-74
 38            </intent-filter>
 39        </activity>
 40        <activity android:name="com.example.toeholdTalk.Fragment.ChatListFragment" />
-40-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:31:9-63
-40-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:31:19-60
+40-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:31:9-63
+40-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:31:19-60
 41        <activity android:name="com.example.toeholdTalk.Fragment.FriendListFragment" />
-41-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:32:9-65
-41-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:32:19-62
+41-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:32:9-65
+41-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:32:19-62
 42        <activity android:name="com.example.toeholdTalk.Activity.MainActivity" />
-42-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:33:9-59
-42-->C:\Users\wjddn\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:33:19-56
+42-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:33:9-59
+42-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:33:19-56
 43
 44        <provider
-44-->[com.squareup.picasso:picasso:2.71828] C:\Users\wjddn\.gradle\caches\transforms-2\files-2.1\b6e74d1d1dedcac880dd0faf65e94ce2\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+44-->[com.squareup.picasso:picasso:2.71828] C:\Users\comd119\.gradle\caches\transforms-2\files-2.1\b93e3ff31d26c8b8bff97343e9c9fedc\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
 45            android:name="com.squareup.picasso.PicassoProvider"
-45-->[com.squareup.picasso:picasso:2.71828] C:\Users\wjddn\.gradle\caches\transforms-2\files-2.1\b6e74d1d1dedcac880dd0faf65e94ce2\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+45-->[com.squareup.picasso:picasso:2.71828] C:\Users\comd119\.gradle\caches\transforms-2\files-2.1\b93e3ff31d26c8b8bff97343e9c9fedc\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
 46            android:authorities="com.example.toeholdTalk.com.squareup.picasso"
-46-->[com.squareup.picasso:picasso:2.71828] C:\Users\wjddn\.gradle\caches\transforms-2\files-2.1\b6e74d1d1dedcac880dd0faf65e94ce2\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+46-->[com.squareup.picasso:picasso:2.71828] C:\Users\comd119\.gradle\caches\transforms-2\files-2.1\b93e3ff31d26c8b8bff97343e9c9fedc\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
 47            android:exported="false" />
-47-->[com.squareup.picasso:picasso:2.71828] C:\Users\wjddn\.gradle\caches\transforms-2\files-2.1\b6e74d1d1dedcac880dd0faf65e94ce2\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+47-->[com.squareup.picasso:picasso:2.71828] C:\Users\comd119\.gradle\caches\transforms-2\files-2.1\b93e3ff31d26c8b8bff97343e9c9fedc\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
 48    </application>
 49
 50</manifest>
