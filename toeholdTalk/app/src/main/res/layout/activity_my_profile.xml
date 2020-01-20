@@ -6,15 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".Activity.MyProfileActivity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#8598b0">
     <Button
         android:id="@+id/profileExitButton"
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_margin="10dp"
         android:background="@drawable/x_button_icon" />
+        </RelativeLayout>
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/personImageView"
+        android:src="@drawable/tt_img"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_centerInParent="true"

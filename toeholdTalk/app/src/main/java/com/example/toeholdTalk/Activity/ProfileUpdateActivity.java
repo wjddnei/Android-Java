@@ -1,10 +1,5 @@
 package com.example.toeholdTalk.Activity;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -17,11 +12,17 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+
 import com.example.toeholdTalk.Model.MyInfo;
 import com.example.toeholdTalk.Model.wSocket;
 import com.example.toeholdTalk.R;
-import com.example.toeholdTalk.Util.RealPathUtil;
 import com.example.toeholdTalk.Retrofit.UserClient;
+import com.example.toeholdTalk.Util.RealPathUtil;
+import com.squareup.picasso.Picasso;
 
 import java.io.File;
 import java.io.IOException;
@@ -55,6 +56,7 @@ public class ProfileUpdateActivity extends AppCompatActivity {
         btn_upload=findViewById(R.id.btn_upload);;
         iv=findViewById(R.id.iv);
         socket = wSocket.get();
+        if(!MyInfo.getMyImagUrl().equals("")) Picasso.get().load("http://45.32.38.196:5000/"+MyInfo.getMyImagUrl()).fit().into(iv);
         requireStoragePermission();
 
         btn_upload.setOnClickListener(new View.OnClickListener() {

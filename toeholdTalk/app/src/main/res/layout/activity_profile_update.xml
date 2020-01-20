@@ -7,6 +7,9 @@
     tools:context=".Activity.ProfileUpdateActivity">
 
     <ImageButton
+        android:layout_below="@+id/iv"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
         android:id="@+id/btn_upload"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -14,8 +17,10 @@
         />
 
     <ImageView
-        android:id="@+id/iv"
+        android:src="@drawable/tt_img"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:layout_width="100dp"
-        android:layout_height="100dp" />
+        android:id="@+id/iv"
+        android:layout_width="150dp"
+        android:layout_height="150dp" />
 </RelativeLayout>
