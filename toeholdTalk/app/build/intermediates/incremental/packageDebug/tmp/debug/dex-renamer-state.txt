@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #Mon Jan 20 23:18:45 KST 2020
+=======
+#Mon Jan 20 21:42:16 KST 2020
+>>>>>>> 71e04b8c41fe9c8f7e722149e487518b9eb32e41
 base.0=C\:\\Users\\wjddn\\Documents\\GitHub\\Android-Java\\toeholdTalk\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex
