@@ -16,6 +16,7 @@
         app:menu="@menu/chat_menu_top"/>
 
     <androidx.recyclerview.widget.RecyclerView
+        android:background="#ffff"
         android:id="@+id/chatListRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -24,6 +25,7 @@
         />
 
     <LinearLayout
+        android:background="#ffff"
         android:id="@+id/bottomLinearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,6 +34,7 @@
         >
 
         <EditText
+
             android:id="@+id/ChatEditText"
             android:layout_width="341dp"
             android:layout_height="wrap_content"

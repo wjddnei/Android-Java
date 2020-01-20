@@ -95,7 +95,7 @@ public class ChatActivity extends AppCompatActivity {
         // 툴바에 홈버튼을 활성화
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         // 툴바의 홈버튼의 이미지를 변경(기본 이미지는 뒤로가기 화살표)
-       // getSupportActionBar().setHomeAsUpIndicator(R.drawable.back_button_icon);
+        // getSupportActionBar().setHomeAsUpIndicator(R.drawable.back_button_icon);
 
 
         //친구 이름 받아서 타이틀 설정
@@ -129,6 +129,8 @@ public class ChatActivity extends AppCompatActivity {
         }
         socket.on("update", updateChat);
 
+        socket.on("update2", updateChat2);
+
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -145,8 +147,41 @@ public class ChatActivity extends AppCompatActivity {
 
             JSONArray receivedData=(JSONArray) args[0];
             try{
+                JSONObject data2 =receivedData.getJSONObject(receivedData.length()-1);
+                System.err.println(data2.getString("receiver") + ", " + data2.getString("sender"));
+                if(data2.getString("receiver").equals(MyInfo.getMyId())){
+                    if(!data2.getString("sender").equals(yourId)) return;
+                }
+
                 for(int i=0; i<receivedData.length(); i++){
                     JSONObject data=receivedData.getJSONObject(i);
+                    //System.out.println(data.toString());
+                    mMessages.add(new ChatContent(data.getString("sender"), data.getString("receiver"), data.getString("message"), data.getString("time")));
+                }
+
+                runOnUiThread(new Runnable(){
+                    @Override
+                    public void run(){
+                        recyclerView.setAdapter(new ChatActivityAdapter(ChatActivity.this, mMessages, yourImageUrl));
+                    }
+                });
+
+            }catch (JSONException e){
+                e.printStackTrace();
+            }
+        }
+    };
+
+    private Emitter.Listener updateChat2=new Emitter.Listener() {
+        @Override
+        public void call(Object... args) {
+            final ArrayList<ChatContent> mMessages=new ArrayList<>();
+
+            JSONArray receivedData=(JSONArray) args[0];
+            try{
+                for(int i=0; i<receivedData.length(); i++){
+                    JSONObject data=receivedData.getJSONObject(i);
+                    if(!data.getString("sender").equals(yourId)) return;
                     //System.out.println(data.toString());
                     mMessages.add(new ChatContent(data.getString("sender"), data.getString("receiver"), data.getString("message"), data.getString("time")));
                 }
