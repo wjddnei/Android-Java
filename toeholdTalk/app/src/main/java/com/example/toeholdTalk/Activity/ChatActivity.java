@@ -35,13 +35,13 @@ import io.socket.emitter.Emitter;
 import static java.security.AccessController.getContext;
 
 public class ChatActivity extends AppCompatActivity {
-    Toolbar toolbar;
-    EditText editText;
-    Button sendButton;
-    MenuItem mSearch;
-    String yourId, yourName, yourImageUrl;
-    Socket socket;
-    RecyclerView recyclerView;
+    private Toolbar toolbar;
+    private EditText editText;
+    private Button sendButton;
+    private MenuItem mSearch;
+    private String yourId, yourName, yourImageUrl;
+    private Socket socket;
+    private RecyclerView recyclerView;
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

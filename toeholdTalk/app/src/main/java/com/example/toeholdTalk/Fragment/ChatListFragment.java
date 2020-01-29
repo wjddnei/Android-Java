@@ -38,11 +38,11 @@ import io.socket.emitter.Emitter;
  * A simple {@link Fragment} subclass.
  */
 public class ChatListFragment extends Fragment {
-    Activity mActivity;
-    Socket socket;
-    ChatListAdapter adapter;
-    ArrayList<ChatList> chatList;
-    RecyclerView chatRoomListRecyclerView;
+    private Activity mActivity;
+    private Socket socket;
+    private ChatListAdapter adapter;
+    private ArrayList<ChatList> chatList;
+    private RecyclerView chatRoomListRecyclerView;
 
     public ChatListFragment() {
         // Required empty public constructor

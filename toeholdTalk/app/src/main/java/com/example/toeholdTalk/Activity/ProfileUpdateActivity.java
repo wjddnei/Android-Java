@@ -41,10 +41,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class ProfileUpdateActivity extends AppCompatActivity {
     private static final int STORAGE_PERMISSION_CODE=1234;
     private  static final int PICK_IMAGE_REQUEST=2345;
-    Socket socket;
+    private Socket socket;
 
-    ImageButton btn_upload;
-    ImageView iv;
+    private ImageButton btn_upload;
+    private ImageView iv;
 
     private Uri filePath;
     private Bitmap bitmap;

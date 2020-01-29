@@ -23,8 +23,8 @@ import io.socket.client.Socket;
 public class MainActivity extends AppCompatActivity {
 
     private static final int FRAG_USER = 0;
-    public static final int FRAG_CHAT = 1;
-    public static final int FRAG_CONFIG = 2;
+    private static final int FRAG_CHAT = 1;
+    private static final int FRAG_CONFIG = 2;
 
     private TabLayout tabLayout;
     private FragmentManager fragmentManager;

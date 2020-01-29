@@ -25,8 +25,8 @@ public class ChatActivityAdapter extends RecyclerView.Adapter<ChatActivityAdapte
     private Context context;
     private ArrayList<ChatContent> items;
     private String imageUrl;
-    public static final int CHAT_LEFT=0;
-    public static final int CHAT_RIGHT=1;
+    private static final int CHAT_LEFT=0;
+    private static final int CHAT_RIGHT=1;
 
     public ChatActivityAdapter(Context context, ArrayList<ChatContent> items, String imageUrl) {
         this.context = context;

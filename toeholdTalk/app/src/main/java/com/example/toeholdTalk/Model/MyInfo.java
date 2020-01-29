@@ -1,9 +1,9 @@
 package com.example.toeholdTalk.Model;
 
 public class MyInfo {
-    static String myId;
-    static String myName;
-    static String myImagUrl;
+    private static String myId;
+    private static String myName;
+    private static String myImagUrl;
 
     public static String getMyId() {
         return myId;

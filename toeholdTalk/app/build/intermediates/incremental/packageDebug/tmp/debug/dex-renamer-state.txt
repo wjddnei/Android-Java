@@ -1,4 +1,4 @@
-#Mon Jan 20 21:42:16 KST 2020
-base.0=C\:\\Users\\wjddn\\Documents\\GitHub\\Android-Java\\toeholdTalk\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
+#Wed Jan 22 19:12:45 KST 2020
+base.0=C\:\\Users\\comd119\\Documents\\GitHub\\Android-Java\\toeholdTalk\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
