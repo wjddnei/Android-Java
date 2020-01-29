@@ -18,10 +18,10 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.squareup.picasso.Picasso;
 
 public class MyProfileActivity extends AppCompatActivity {
-    Button profileExitButton;
-    BottomNavigationView profileBottomNavigation;
-    ImageView myImage;
-    TextView myName;
+    private Button profileExitButton;
+    private BottomNavigationView profileBottomNavigation;
+    private ImageView myImage;
+    private TextView myName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

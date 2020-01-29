@@ -22,8 +22,8 @@ import java.util.ArrayList;
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class ChatListAdapter extends RecyclerView.Adapter<ChatListAdapter.ViewHolder> {
-    Context context;
-    ArrayList<ChatList> items;
+    private Context context;
+    private ArrayList<ChatList> items;
 
     public ChatListAdapter(Context context, ArrayList<ChatList> chatList) {
         this.context = context;

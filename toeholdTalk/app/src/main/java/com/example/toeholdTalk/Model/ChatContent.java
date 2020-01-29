@@ -3,7 +3,7 @@ package com.example.toeholdTalk.Model;
 import androidx.annotation.NonNull;
 
 public class ChatContent {
-        String sender, receiver, message, time;
+    private String sender, receiver, message, time;
 
         public ChatContent(String sender, String receiver, String message, String time) {
             this.sender = sender;

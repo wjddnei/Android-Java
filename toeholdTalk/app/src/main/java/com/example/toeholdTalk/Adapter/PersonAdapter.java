@@ -23,8 +23,8 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 public class PersonAdapter extends RecyclerView.Adapter<PersonAdapter.ViewHolder> {
 
-    Context context;
-    ArrayList<Person> items;
+    private Context context;
+    private ArrayList<Person> items;
 
     public PersonAdapter(Context context, ArrayList<Person> personList) {
         this.context = context;

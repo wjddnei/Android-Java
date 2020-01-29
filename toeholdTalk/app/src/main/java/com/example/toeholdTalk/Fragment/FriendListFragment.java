@@ -44,15 +44,15 @@ import io.socket.client.Socket;
 import io.socket.emitter.Emitter;
 
 public class FriendListFragment extends Fragment {
-    Activity mActivity;
-    Socket socket;
-    ArrayList<Person> personList;
-    PersonAdapter adapter;
-    RecyclerView friendListView;
-    LinearLayout profile;
-    ImageView image;
-    TextView name;
-    TextView numfriend;
+    private Activity mActivity;
+    private Socket socket;
+    private ArrayList<Person> personList;
+    private PersonAdapter adapter;
+    private RecyclerView friendListView;
+    private LinearLayout profile;
+    private ImageView image;
+    private TextView name;
+    private TextView numfriend;
 
     private SearchView searchView = null;
     private SearchView.OnQueryTextListener queryTextListener;

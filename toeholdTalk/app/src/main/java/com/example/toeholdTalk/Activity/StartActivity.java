@@ -22,11 +22,11 @@ import io.socket.emitter.Emitter;
 public class StartActivity extends AppCompatActivity {
 
 
-    Button loginButton, signUpButton;
-    EditText idEditText, passwordEditText;
-    Socket socket;
-    int result;
-    String myId;
+    private Button loginButton, signUpButton;
+    private EditText idEditText, passwordEditText;
+    private Socket socket;
+    private int result;
+    private String myId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

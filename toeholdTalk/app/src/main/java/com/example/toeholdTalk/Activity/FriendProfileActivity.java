@@ -17,11 +17,12 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.squareup.picasso.Picasso;
 
 public class FriendProfileActivity extends AppCompatActivity {
-    Button profileExitButton;
-    BottomNavigationView profileBottomNavigation;
-    TextView textView;
-    ImageView imageView;
-    String name, imageUrl, id;
+    private Button profileExitButton;
+    private BottomNavigationView profileBottomNavigation;
+    private TextView textView;
+    private ImageView imageView;
+    private String name, imageUrl, id;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

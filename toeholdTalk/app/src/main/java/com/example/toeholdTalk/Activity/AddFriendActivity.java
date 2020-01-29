@@ -30,14 +30,14 @@ import io.socket.emitter.Emitter;
 
 public class AddFriendActivity extends AppCompatActivity {
 
-    EditText serachFriendEditText;
-    Button serachFriendButton, addFriendButton;
-    Toolbar toolbar;
-    String myId;
-    Socket socket;
-    LinearLayout layoutFound, layoutNotFound;
-    CircleImageView profileImageView;
-    TextView profileTextView;
+    private EditText serachFriendEditText;
+    private Button serachFriendButton, addFriendButton;
+    private Toolbar toolbar;
+    private String myId;
+    private Socket socket;
+    private LinearLayout layoutFound, layoutNotFound;
+    private CircleImageView profileImageView;
+    private TextView profileTextView;
 
     String yourId, yourName, yourImageUrl;
 

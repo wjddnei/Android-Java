@@ -51,61 +51,60 @@
 27-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:19:9-54
 28        android:supportsRtl="true"
 28-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:20:9-35
-29        android:testOnly="true"
-30        android:theme="@style/AppTheme"
-30-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:21:9-40
-31        android:usesCleartextTraffic="true" >
-31-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:22:9-44
-32        <activity android:name="com.example.toeholdTalk.Activity.ProfileUpdateActivity" />
-32-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:23:9-77
-32-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:23:19-65
-33        <activity android:name="com.example.toeholdTalk.Activity.FriendProfileActivity" />
-33-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:24:9-68
-33-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:24:19-65
-34        <activity android:name="com.example.toeholdTalk.Activity.AddFriendActivity" />
-34-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:25:9-64
-34-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:25:19-61
-35        <activity android:name="com.example.toeholdTalk.Activity.MyProfileActivity" />
-35-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:26:9-64
-35-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:26:19-61
-36        <activity android:name="com.example.toeholdTalk.Activity.ChatActivity" />
-36-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:27:9-59
-36-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:27:19-56
-37        <activity android:name="com.example.toeholdTalk.Activity.RegisterActivity" />
-37-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:28:9-63
-37-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:28:19-60
-38        <activity android:name="com.example.toeholdTalk.Activity.StartActivity" >
-38-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:29:9-35:20
-38-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:29:19-57
-39            <intent-filter>
-39-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:30:13-34:29
-40                <action android:name="android.intent.action.MAIN" />
-40-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:31:17-69
-40-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:31:25-66
-41
-42                <category android:name="android.intent.category.LAUNCHER" />
-42-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:33:17-77
-42-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:33:27-74
-43            </intent-filter>
-44        </activity>
-45        <activity android:name="com.example.toeholdTalk.Fragment.ChatListFragment" />
-45-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:36:9-63
-45-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:36:19-60
-46        <activity android:name="com.example.toeholdTalk.Fragment.FriendListFragment" />
-46-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:37:9-65
-46-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:37:19-62
-47        <activity android:name="com.example.toeholdTalk.Activity.MainActivity" />
-47-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:38:9-59
-47-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:38:19-56
-48
-49        <provider
-49-->[com.squareup.picasso:picasso:2.71828] C:\Users\comd119\.gradle\caches\transforms-2\files-2.1\b93e3ff31d26c8b8bff97343e9c9fedc\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
-50            android:name="com.squareup.picasso.PicassoProvider"
-50-->[com.squareup.picasso:picasso:2.71828] C:\Users\comd119\.gradle\caches\transforms-2\files-2.1\b93e3ff31d26c8b8bff97343e9c9fedc\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
-51            android:authorities="com.example.toeholdTalk.com.squareup.picasso"
-51-->[com.squareup.picasso:picasso:2.71828] C:\Users\comd119\.gradle\caches\transforms-2\files-2.1\b93e3ff31d26c8b8bff97343e9c9fedc\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
-52            android:exported="false" />
-52-->[com.squareup.picasso:picasso:2.71828] C:\Users\comd119\.gradle\caches\transforms-2\files-2.1\b93e3ff31d26c8b8bff97343e9c9fedc\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
-53    </application>
-54
-55</manifest>
+29        android:theme="@style/AppTheme"
+29-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:21:9-40
+30        android:usesCleartextTraffic="true" >
+30-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:22:9-44
+31        <activity android:name="com.example.toeholdTalk.Activity.ProfileUpdateActivity" />
+31-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:23:9-77
+31-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:23:19-65
+32        <activity android:name="com.example.toeholdTalk.Activity.FriendProfileActivity" />
+32-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:24:9-68
+32-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:24:19-65
+33        <activity android:name="com.example.toeholdTalk.Activity.AddFriendActivity" />
+33-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:25:9-64
+33-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:25:19-61
+34        <activity android:name="com.example.toeholdTalk.Activity.MyProfileActivity" />
+34-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:26:9-64
+34-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:26:19-61
+35        <activity android:name="com.example.toeholdTalk.Activity.ChatActivity" />
+35-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:27:9-59
+35-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:27:19-56
+36        <activity android:name="com.example.toeholdTalk.Activity.RegisterActivity" />
+36-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:28:9-63
+36-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:28:19-60
+37        <activity android:name="com.example.toeholdTalk.Activity.StartActivity" >
+37-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:29:9-35:20
+37-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:29:19-57
+38            <intent-filter>
+38-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:30:13-34:29
+39                <action android:name="android.intent.action.MAIN" />
+39-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:31:17-69
+39-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:31:25-66
+40
+41                <category android:name="android.intent.category.LAUNCHER" />
+41-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:33:17-77
+41-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:33:27-74
+42            </intent-filter>
+43        </activity>
+44        <activity android:name="com.example.toeholdTalk.Fragment.ChatListFragment" />
+44-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:36:9-63
+44-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:36:19-60
+45        <activity android:name="com.example.toeholdTalk.Fragment.FriendListFragment" />
+45-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:37:9-65
+45-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:37:19-62
+46        <activity android:name="com.example.toeholdTalk.Activity.MainActivity" />
+46-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:38:9-59
+46-->C:\Users\comd119\Documents\GitHub\Android-Java\toeholdTalk\app\src\main\AndroidManifest.xml:38:19-56
+47
+48        <provider
+48-->[com.squareup.picasso:picasso:2.71828] C:\Users\comd119\.gradle\caches\transforms-2\files-2.1\b93e3ff31d26c8b8bff97343e9c9fedc\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+49            android:name="com.squareup.picasso.PicassoProvider"
+49-->[com.squareup.picasso:picasso:2.71828] C:\Users\comd119\.gradle\caches\transforms-2\files-2.1\b93e3ff31d26c8b8bff97343e9c9fedc\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+50            android:authorities="com.example.toeholdTalk.com.squareup.picasso"
+50-->[com.squareup.picasso:picasso:2.71828] C:\Users\comd119\.gradle\caches\transforms-2\files-2.1\b93e3ff31d26c8b8bff97343e9c9fedc\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+51            android:exported="false" />
+51-->[com.squareup.picasso:picasso:2.71828] C:\Users\comd119\.gradle\caches\transforms-2\files-2.1\b93e3ff31d26c8b8bff97343e9c9fedc\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+52    </application>
+53
+54</manifest>
