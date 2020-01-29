@@ -232,7 +232,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="314" />
     <option name="y" value="62" />
     <option name="width" value="950" />
@@ -471,7 +471,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="32" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="32" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" sideWeight="0.50438595" side_tool="true" weight="0.24630873" />
@@ -484,7 +484,7 @@
       <window_info id="Resources Explorer" order="7" weight="0.3295302" />
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Debug" order="0" />
-      <window_info anchor="bottom" id="Run" order="1" visible="true" weight="0.34262297" />
+      <window_info anchor="bottom" id="Run" order="1" weight="0.34262297" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.3295082" />
       <window_info anchor="bottom" id="Logcat" order="3" sideWeight="0.4986577" weight="0.7147541" />
       <window_info anchor="bottom" id="TODO" order="4" weight="0.3286119" />
